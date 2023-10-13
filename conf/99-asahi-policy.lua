@@ -15,6 +15,18 @@ j415 = {
 }
 table.insert(dsp_policy.policy.rules, j415)
 
+-- J413 (MacBook Air 13", M2, 2022  )
+j413 = {
+  matches = {
+    {
+      { "media.class", "matches", "*/Sink" },
+      { "node.name", "=", "alsa_output.platform-sound.HiFi__hw_J413_1__sink" }
+    }
+  },
+  filter_chain = '/usr/share/asahi-audio/j413/graph.json'
+}
+table.insert(dsp_policy.policy.rules, j413)
+
 -- J314 (MacBook Pro 14", M1 Pro/Max, 2021)
 j314 = {
   matches = {
